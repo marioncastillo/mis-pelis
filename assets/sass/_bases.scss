@@ -1,3 +1,4 @@
+
 .rojo{
 	background-color:$colorrojo;
 }
@@ -33,3 +34,56 @@
 	}
 }
 // FIN INDEX//
+
+.val_body{
+	background: $colorrojo;
+	
+}
+
+.val_nav{
+	background-color: $negroOpaco;
+	border:none;
+	box-shadow: 2px 2px 5px $negroOpaco; //sombra
+}
+
+
+
+.val_titulo{
+	color: $colorgris;
+	height: 100px;
+	-ms-display:flex;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	font-weight: bold;
+	width:360px;
+	border-sizing:none;
+	margin-left: -15px;
+	margin:0 auto;
+	font-family: 'Anton', sans-serif;
+
+}
+
+
+.val_label{
+	color: $colorgris;
+	margin-top: 30px;
+	
+}
+
+.val_btn__create{
+	display:flex;
+	justify-content: center;
+	margin-top: 30px;
+	width: 50px;
+}
+
+
+.btn-primary{
+	background-color: $negroOpaco;
+	border:none;
+	width: 200px;
+}
+
+
+
