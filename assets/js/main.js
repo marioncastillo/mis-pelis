@@ -1,9 +1,16 @@
 $(document).ready(function(){
+
+//INICIO LOGIN//
 	$("#login").click(function(e){
 			e.preventDefault();
 			window.location = "login.html";
 		});
-
+/*
+		$("#create").click(function(e){
+			e.preventDefault();
+			window.location = "create.html";
+		});
+*/
 $("#inicia").click(function(e){
 
 		function isEmail(email) {
@@ -32,3 +39,5 @@ $("#inicia").click(function(e){
 		}
 	});
 });
+
+//FIN LOGIN//
