@@ -1,0 +1,14 @@
+@mixin boton(){
+	width: 100%;
+	height: 50%;
+	font-size: 150%;
+	color:$colorrojo;
+	margin-top:5%;
+}
+
+@mixin huno(){
+	font-size: 500%;
+	margin-top: 60%;
+	margin-bottom:10%;
+	color:white;
+}

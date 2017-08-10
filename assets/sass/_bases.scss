@@ -1,0 +1,16 @@
+body{
+	background-color:$colorrojo;
+}
+.inicio{
+	h1{
+	@include huno();
+	}
+	button{
+	@include boton();
+	}
+	p{
+	color:white;
+	font-size:150%;
+	margin-top:10%;
+	}
+}
