@@ -1,6 +1,7 @@
-body{
+.rojo{
 	background-color:$colorrojo;
 }
+// INICIO INDEX//
 .inicio{
 	h1{
 	@include huno();
@@ -14,3 +15,21 @@ body{
 	margin-top:10%;
 	}
 }
+// FIN INDEX//
+
+// INICIO LOGIN//
+.login{
+	h1{
+	@include huno();
+	}
+	button{
+	@include boton();
+	}
+	input{
+	width: 100%;
+	font-size: 150%;
+	color:$colorrojo;
+	margin-top:5%;
+	}
+}
+// FIN INDEX//
