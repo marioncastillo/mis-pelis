@@ -1,0 +1,35 @@
+.navbar {
+	border: none;
+	background-color: $colornegro;
+}
+.navbar-header {
+    text-align: center;
+}
+.navbar-default {
+	.navbar-toggle {
+	    position: absolute;
+	    left: 0;
+	    margin-left: 5px;
+	    margin-right: 0;
+	    border-color: transparent;
+	    &:focus,
+	    &:hover {
+			border: 1px solid $colorgris-oscuro;
+		    background-color: transparent;
+	    }
+	}
+	.navbar-collapse {
+		border: 1px solid $colorgris-oscuro;
+	}
+	.navbar-nav>li>a {
+		color: $colorgris;
+		&:focus,
+	    &:hover {
+			color: $colorgris-oscuro;
+	    }
+	}
+}
+.navbar-brand {
+	float: none;
+	display: block;
+}
