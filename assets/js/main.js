@@ -5,12 +5,12 @@ $(document).ready(function(){
 			e.preventDefault();
 			window.location = "login.html";
 		});
-/*
-		$("#create").click(function(e){
+
+	$("#create").click(function(e){
 			e.preventDefault();
-			window.location = "create.html";
+			window.location = "Create.html";
 		});
-*/
+	
 $("#inicia").click(function(e){
 
 		function isEmail(email) {
