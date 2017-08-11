@@ -1,5 +1,5 @@
 
-$(document).ready(function(){
+/*$(document).ready(function(){
 
 	var miUrl = 'https://netflixroulette.net/api/api.php?director=';
 
@@ -63,6 +63,4 @@ $(document).ready(function(){
 	/*.always(function() {
 		console.log("complete");
 	});*/
-	});
-
-})
+	
