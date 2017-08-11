@@ -86,5 +86,23 @@
 	width: 200px;
 }
 
-
-
+#ma-profile{
+	#ma-fotoperfil{
+		width:40%;
+	}
+	#ma-prof{
+		background-color:$colornegro;
+		color:$colorgris;
+		margin-top:-20px;
+	}
+	#ma-favorite{
+		background-color:$colorrojo;
+		color:$colorgris;
+	}
+	#ma-fotopelicula{
+		margin-top:20px;
+	}
+	p{
+		color:$colorrojo;
+	}
+}
