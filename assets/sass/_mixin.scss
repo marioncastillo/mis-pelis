@@ -1,0 +1,17 @@
+@mixin boton(){
+	width: 100%;
+	height: 200%;
+	font-size: 150%;
+	color:$colorrojo;
+	margin-top:5%;
+	font-family:$fontdos;
+}
+
+@mixin huno(){
+	font-size: 500%;
+	margin-top: 60%;
+	margin-bottom:10%;
+	color:white;
+	font-family:$fontuno;
+
+}
