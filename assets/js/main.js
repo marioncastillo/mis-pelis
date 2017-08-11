@@ -45,8 +45,8 @@ $("#inicia").click(function(e){
 
 	var directores = ['Quentin%20Tarantino','Stephen%20King','Tim%20Burton','John%20Huston','Woody%20Allen','Martin%20Scorsese','David%20Lynch','Lars%20von%20Trier','Steven%20Spielberg','Jouji%20Shimura','Kevin%20Allen','Fritz%20Lang','James%20Westby','Alex%20Winter','Sean%20Baker','Chad%20Kapper','David%20DeCoteau','Jim%20Wynorski','John%20Herzfeld','Jonathan%20Kaplan','Andrew%20Fleming','Tobe%20Hooper','Kevin%20Dunn','Alex%20de%20la%20Iglesia','Nick%20Herbert','Vipul%20Amrutlal%20Shah','Rodney%20Ray','Leslie%20Zemeckis','Camille%20Delamarre','Paul%20Etheredge','Lone%20Scherfig','Satoshi%20Nishimura','Christopher%20Nolan','Bassam%20Kurdali','Kenji%20Kamiyama','Woody%20Allen','Martin%20Scorsese','Steven%20Spielberg','Stanley%20Kubrick','Alfred%20Hitchcock','David%20Lynch','John%20Ford'];
 	
+	var directores = ['Quentin%20Tarantino','Stephen%20King','Tim%20Burton','John%20Huston','Woody%20Allen','Martin%20Scorsese','David%20Lynch','Lars%20von%20Trier','Steven%20Spielberg'];
 	
-
 	directores.forEach(function(e){
 		$.ajax({
 		url: miUrl + e,
@@ -57,9 +57,6 @@ $("#inicia").click(function(e){
 	.done(function(response){
 		response.forEach(function(element){
 
-
-
-
 			var estructura = ('<li>' +
 		          '<div class="container listado">' + 
 		            '<div class="row">' + 
@@ -67,6 +64,15 @@ $("#inicia").click(function(e){
 		                '<p class="val_titlepeli"><strong>' + element.show_title+ '</strong>' + element.release_year + ' | ' + element.category + '</p>' + 
 		              '</div>' +
 		              '<div class="col-sm-4 col-xs-4 pull-right">' + 
+
+			$('.camj_movies-lista').append(
+				'<li>' +
+		          '<div class="container listado">' + 
+		            '<div class="row">' + 
+		              '<div class="col-sm-6 col-xs-6 pull-left" id="'+element.show_id+'">' + 
+		                '<p class="val_titlepeli"><strong>' + element.show_title+ '</strong>' + element.release_year + '|' + element.category + '</p>' + 
+		              '</div>' +
+		              '<div class="col-sm-6 col-xs-6 pull-right">' + 
 		                '<button id="val_movie__btn__favorites" type="button" class="btn btn-danger">Add favorites</button>' + 
 		              '</div>' + 
 		            '</div>' + 
@@ -108,8 +114,16 @@ $("#inicia").click(function(e){
 			});
 		});
 
-		
-
+			
+			$("#boton").click(function(){
+				var elegir = $("select").val();
+			if (elegir==element.category){
+				$('.listado').hide();
+				$(".category").append('<p>Titulo: ' + element.show_title + '</p>');
+			}
+			})
+			
+		});
 	})
 	.fail(function() {
 		console.log("error");
