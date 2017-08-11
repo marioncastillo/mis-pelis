@@ -2,7 +2,7 @@
 ### Sprint 7
 
 ### Requerimientos Técnicos
-Proyecto que consiste en mostrar las peliculas de Netfix filtradas por categorias para agregarla las favoritas en el perfil del usuario
+Proyecto que consiste en mostrar las peliculas de Netfix filtradas por categorias para agregar las favoritas en el perfil del usuario
 
 El proyecto fue realizado con las siguientes dependencias NPM:
 
