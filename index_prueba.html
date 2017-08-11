@@ -1,27 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es_CL">
 <head>
-	<meta charset="UTF-8">
-	<title>lista pelis</title>
+	<title>Mis Pelis</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Peliculinis">
+	<script src="https://use.fontawesome.com/d2c9b2c5c1.js"></script>
+	<link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
 </head>
 <body>
-	
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Mis Pelis</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="movies.html">Movie List</a></li>
+        <li><a href="profile.html">My Profile</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 center-block">
+        <div class="form-group">
+          <select class="form-control" id="sel1">
+            <option value="Dramas">Dramas</option>
+            <option value="Action & Adventure">Action & Adventure</option>
+            <option value="Independent Movies">Independent Movies</option>
+            <option value="Oscar-winning Movies">Oscar-winning Movies</option>
+            <option value="Comedies">Comedies</option>
+          </select>
+          <button id="boton">click</button>
+        </div>
+    </div>
+      
+		</div>
+	</div>
+</header>
+<section id="camj_movies" >
+	<div class="container">
+		<div class="row">
+			<ul class="camj_movies-lista">
+        
+      </ul>
+		</div>
+	</div>
+</section>
+<section class="category" >
+  <div class="container">
+    <div class="row">
+        
+      </ul>
+    </div>
+  </div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-	<select name="" id="selector">
-		<option value="Dramas">Dramas</option>
-		<option value="Action & Adventure">Action & Adventure</option>
-		<option value="Independent Movies">Independent Movies</option>
-		<option value="Oscar-winning Movies">Oscar-winning Movies</option>
-		<option value="Comedies">Comedies</option>
-	</select>
-	<button id="boton">click</button>
-	
-	<div class="category"></div>
-
-	<div class="container"></div>
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="assets/js/main.js"></script>
+<script src="assets/js/main_prueba.js" ></script>
 </body>
 </html>
