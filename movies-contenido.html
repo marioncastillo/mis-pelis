@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es_CL">
+<head>
+	<title>Mis Pelis</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Peliculinis">
+	<script src="https://use.fontawesome.com/d2c9b2c5c1.js"></script>
+	<link rel="stylesheet" type="text/css" href="dist/css/style.min.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+         <!---->
+      <a class="navbar-brand" href="#">MOVIES</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="movies.html">Movie List</a></li>
+        <li><a href="profile.html">My Profile</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav><!--Aqui termina el nav-->
+<header>
+  <div class="container">
+    <div class="row">
+    <div class="col-xs-12 center-block">
+        <div class="form-group">
+          <select class="form-control" id="sel1">
+            <option>Category</option>
+            <option>Category</option>
+            <option>Category</option>
+            <option>Category</option>
+          </select>
+        </div>
+    </div>
+      
+     </div><!--Aqui termina mi row-->
+  </div><!--aqui temrina mi container-->
+<section class="val_movie__category">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-xs-6 pull-left">
+      <p class="val_titlepeli"><strong>Still Alice</strong>2014|Drama</p>
+    </div>
+    <div class="col-sm-6 col-xs-6 pull-right">
+      <button id="val_movie__btn__favorites" type="button" class="btn btn-danger">Add favorites</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+       <div class="col-sm-4 col-xs-4 pull-left">
+         <p class="val_movie__icon"><i class="fa fa-clock-o" aria-hidden="true"></i>101 minutes</p>
+       </div>
+       <div class="col-sm-4 col-xs-4 center-block">
+         <p class="val_movie__icon"><i class="fa fa-film" aria-hidden="true"></i>
+          Richard Glatzed</p>
+       </div>
+       <div class="col-sm-4 col-xs-4 pull-right">
+         <img class="val_img__estrellas" src="assets/docs/estrellas.png" alt="Una imagen de valoracion de estrellas img-responsive"> 
+       </div>
+    </div>
+  </div>
+</div>
+</section>
+			
+		
+<script src="dist/js/script.js" ></script>
+</body>
+</html>
