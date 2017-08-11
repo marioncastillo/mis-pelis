@@ -12630,7 +12630,6 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-<<<<<<< HEAD
 $(document).ready(function() {
 	//solo letras numeros @ y . en el input
 	$(document).on('keypress', '#email-input', function (event) {
@@ -12667,10 +12666,8 @@ $(document).ready(function() {
 	    }
 	});
 });
-=======
 var contador = 0;
 
->>>>>>> ajax
 $(document).ready(function(){
 
 //INICIO LOGIN//
@@ -12716,11 +12713,7 @@ $(document).ready(function(){
 
 	var miUrl = 'https://netflixroulette.net/api/api.php?director=';
 
-<<<<<<< HEAD
-	var directores = ['Quentin%20Tarantino','Stephen%20King','Tim%20Burton','John%20Huston','Woody%20Allen','Martin%20Scorsese','David%20Lynch','Lars%20von%20Trier','Steven%20Spielberg'];
-=======
 	var directores = ['Quentin%20Tarantino','Stephen%20King','Tim%20Burton','John%20Huston','Woody%20Allen','Martin%20Scorsese','David%20Lynch','Lars%20von%20Trier','Steven%20Spielberg','Jouji%20Shimura','Kevin%20Allen','Fritz%20Lang','James%20Westby','Alex%20Winter','Sean%20Baker','Chad%20Kapper','David%20DeCoteau','Jim%20Wynorski','John%20Herzfeld','Jonathan%20Kaplan','Andrew%20Fleming','Tobe%20Hooper','Kevin%20Dunn','Alex%20de%20la%20Iglesia','Nick%20Herbert','Vipul%20Amrutlal%20Shah','Rodney%20Ray','Leslie%20Zemeckis','Camille%20Delamarre','Paul%20Etheredge','Lone%20Scherfig','Satoshi%20Nishimura','Christopher%20Nolan','Bassam%20Kurdali','Kenji%20Kamiyama','Woody%20Allen','Martin%20Scorsese','Steven%20Spielberg','Stanley%20Kubrick','Alfred%20Hitchcock','David%20Lynch','John%20Ford'];
->>>>>>> ajax
 	
 	directores.forEach(function(e){
 		$.ajax({
@@ -12731,27 +12724,15 @@ $(document).ready(function(){
 	})
 	.done(function(response){
 		response.forEach(function(element){
-<<<<<<< HEAD
-			$('.camj_movies-lista').append(
-				'<li>' +
-		          '<div class="container listado">' + 
-		            '<div class="row">' + 
-		              '<div class="col-sm-6 col-xs-6 pull-left" id="'+element.show_id+'">' + 
-		                '<p class="val_titlepeli"><strong>' + element.show_title+ '</strong>' + element.release_year + '|' + element.category + '</p>' + 
-		              '</div>' +
-		              '<div class="col-sm-6 col-xs-6 pull-right">' + 
-		                '<button id="val_movie__btn__favorites" type="button" class="btn btn-danger">Add favorites</button>' + 
-=======
 
 			var estructura = ('<li>' +
 		          '<div class="container listado">' + 
 		            '<div class="row">' + 
 		              '<div class="col-sm-8 col-xs-8 pull-left">' + 
-		                '<a class="val_titlepeli" href="details.html" id="'+element.show_id+'"><strong>' + element.show_title+ '</strong> ' + element.release_year + ' | ' + element.category + '</a>' + 
+		                '<a class="val_titlepeli" href="details.html" id="link'+element.show_id+'"><strong>' + element.show_title+ '</strong> ' + element.release_year + ' | ' + element.category + '</a>' + 
 		              '</div>' +
 		              '<div class="col-sm-4 col-xs-4 pull-right">' + 
 		                '<button id="'+ element.show_id +'-b' +'" type="button" class="btn btn-danger">Add favorites</button>' + 
->>>>>>> ajax
 		              '</div>' + 
 		            '</div>' + 
 		            '<div class="row">' +
@@ -12771,22 +12752,6 @@ $(document).ready(function(){
 		              '</div>' +
 		            '</div>' +
 		          '</div>' + 
-<<<<<<< HEAD
-		        '</li>')
-
-
-
-			
-			$("#boton").click(function(){
-				var elegir = $("select").val();
-			if (elegir==element.category){
-				$('.listado').hide();
-				$(".category").append('<p>Titulo: ' + element.show_title + '</p>');
-			}
-			})
-			
-		});
-=======
 		        '</li>');
 
 			$('.camj_movies-lista').append(estructura);
@@ -12809,30 +12774,28 @@ $(document).ready(function(){
 				var pelicula = localStorage.setItem(('foto'+ contador),element.poster);
 			});
 
+$("#link"+element.show_id).click(function(){
+                var poster2 = localStorage.setItem("photo",element.poster);
+                var miTitulo = localStorage.setItem("tit",element.show_title);
+                var miCat = localStorage.setItem("cate",element.category);
+                var miDesc = localStorage.setItem("desc",element.summary);
+            });
 
 		});
 
->>>>>>> ajax
 	})
 	.fail(function() {
 		console.log("error");
 	})
-<<<<<<< HEAD
-	/*.always(function() {
-		console.log("complete");
-	});*/
-	});
-
-});
-
-$(document).ready(function(){
-=======
 		
 	});
 	var cont = localStorage.getItem('contador');
 	for(var i=1; i<=cont;i++){
 		$('.save-movie').append('<li> <div><img src="'+ localStorage.getItem('foto' + i) +'" class="img-responsive"></div>  <h5>'+localStorage.getItem('titu' + i)+'</h5></li>');
 		}
+		$(".val_details_img").attr('src', localStorage.getItem("photo"));
+$(".val_details__titleMovie").append('<span class="categoria">'+localStorage.getItem("tit")+'</span> | <span class="categoria">'+localStorage.getItem("cate")+'</span> ');
+$(".val_details__parrafo").append('<p>'+localStorage.getItem("desc")+'</p>');
 	});
 	
 
@@ -12840,7 +12803,6 @@ $(document).ready(function(){
 
 
 /*$(document).ready(function(){
->>>>>>> ajax
 
 	var miUrl = 'https://netflixroulette.net/api/api.php?director=';
 
@@ -12904,10 +12866,7 @@ $(document).ready(function(){
 	/*.always(function() {
 		console.log("complete");
 	});*/
-<<<<<<< HEAD
-	});
-
-})
+	
 $(document).ready(function() {
 	// mostrar datos de usuario desde Localstorage
 	usernameStorage();
@@ -12936,6 +12895,3 @@ function countryStorage() {
 		$("#country").html("Middle of the desert");
 	}
 }
-=======
-	
->>>>>>> ajax

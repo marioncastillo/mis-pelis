@@ -61,7 +61,7 @@ $(document).ready(function(){
 		          '<div class="container listado">' + 
 		            '<div class="row">' + 
 		              '<div class="col-sm-8 col-xs-8 pull-left">' + 
-		                '<a class="val_titlepeli" href="details.html" id="'+element.show_id+'"><strong>' + element.show_title+ '</strong> ' + element.release_year + ' | ' + element.category + '</a>' + 
+		                '<a class="val_titlepeli" href="details.html" id="link'+element.show_id+'"><strong>' + element.show_title+ '</strong> ' + element.release_year + ' | ' + element.category + '</a>' + 
 		              '</div>' +
 		              '<div class="col-sm-4 col-xs-4 pull-right">' + 
 		                '<button id="'+ element.show_id +'-b' +'" type="button" class="btn btn-danger">Add favorites</button>' + 
@@ -106,6 +106,12 @@ $(document).ready(function(){
 				var pelicula = localStorage.setItem(('foto'+ contador),element.poster);
 			});
 
+$("#link"+element.show_id).click(function(){
+                var poster2 = localStorage.setItem("photo",element.poster);
+                var miTitulo = localStorage.setItem("tit",element.show_title);
+                var miCat = localStorage.setItem("cate",element.category);
+                var miDesc = localStorage.setItem("desc",element.summary);
+            });
 
 		});
 
@@ -119,6 +125,9 @@ $(document).ready(function(){
 	for(var i=1; i<=cont;i++){
 		$('.save-movie').append('<li> <div><img src="'+ localStorage.getItem('foto' + i) +'" class="img-responsive"></div>  <h5>'+localStorage.getItem('titu' + i)+'</h5></li>');
 		}
+		$(".val_details_img").attr('src', localStorage.getItem("photo"));
+$(".val_details__titleMovie").append('<span class="categoria">'+localStorage.getItem("tit")+'</span> | <span class="categoria">'+localStorage.getItem("cate")+'</span> ');
+$(".val_details__parrafo").append('<p>'+localStorage.getItem("desc")+'</p>');
 	});
 	
 
